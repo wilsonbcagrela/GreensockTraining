@@ -1,0 +1,127 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  border: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #333;
+}
+
+header {
+  height: 15vh;
+  background-color: #98FB98;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .frase {
+  cursor: pointer;
+}
+
+header .link {
+  cursor: pointer;
+}
+
+header .link:hover {
+  border-radius: 20%;
+  background-color: royalblue;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.content .circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.content .circle-1 {
+  background: red;
+}
+
+.content .circle-2 {
+  background: yellow;
+}
+
+.content .circle-3 {
+  background: green;
+}
+
+.content .circle-4 {
+  background: violet;
+}
+
+.content .circle-5 {
+  background: black;
+}
+
+.slide1 {
+  height: 100vh;
+}
+
+.slide1 .grid-container {
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+ 
+  grid-template-columns: repeat(2, 1fr);
+  /*com isto fica 4 colunas com 1fr, 1 fraction */
+}
+
+.slide1 .grid-item {
+  border: solid white 1px;
+  padding: 20px;
+  background-color: cornflowerblue;
+  grid-auto-rows: minmax(700px, auto);
+  /*as rows vão ter o tamanho minimo de 100px enquanto que quando tiverem content vão crescer consoante o contant*/
+}
+
+.slide1 .grid-item-1 {
+  grid-column: span 1;
+}
+
+.slide1 .grid-item-2 {
+  grid-row: span 1;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15vh;
+  background-color: #98FB98;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,96 @@
+$headerFooterColor : #98FB98;
+$contentColor  : #333;
+
+@mixin flexCenter($justifyContent) {
+    display: flex;
+    justify-content: $justifyContent;
+}
+
+*{
+    margin: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    
+    display: flex;
+    flex-direction: column;
+    background: $contentColor;
+}
+header{
+    height: 15vh;
+    background-color: $headerFooterColor;
+    @include flexCenter(space-evenly);
+    align-items: center;
+    // position: fixed;
+    .frase{
+        cursor: pointer;
+    }
+    .link{
+        cursor: pointer;
+        &:hover{
+            border-radius: 20%;
+            background-color: royalblue;
+        }
+    }
+}
+.content{
+    @include flexCenter(space-evenly);
+    align-items: center;
+    
+    
+    height: 100vh;
+    .circle {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        
+    }
+    .circle-1 {
+        background: red;
+    }
+    .circle-2 {
+        background: yellow;
+    }
+    .circle-3{
+        background: green;
+    }
+    .circle-4 {
+        background:violet;
+    }
+    .circle-5 {
+        background: black;
+    }
+}
+.slide1{
+    height: 100vh;
+    .grid-container{
+        // background-color: darkblue;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /*com isto fica 4 colunas com 1fr, 1 fraction */
+       
+
+    }
+    .grid-item{
+        border: solid white 1px;
+        padding: 20px;
+        background-color: cornflowerblue;
+        grid-auto-rows: minmax(700px, auto); /*as rows vão ter o tamanho minimo de 100px enquanto que quando tiverem content vão crescer consoante o contant*/
+    }
+    .grid-item-1{
+  
+        grid-column: span 1;
+    
+    }
+    .grid-item-2{
+        grid-row: span 1;
+ 
+    }
+}
+footer{
+    @include flexCenter(center);
+    align-items: center;
+    height: 15vh;
+    background-color: $headerFooterColor;
+}
