@@ -1,5 +1,5 @@
 $headerFooterColor : #98FB98;
-$contentColor  : #333;
+$contentColor  : #fafafa;
 
 @mixin flexCenter($justifyContent) {
     display: flex;
@@ -62,32 +62,7 @@ header{
         background: black;
     }
 }
-.slide1{
-    height: 100vh;
-    .grid-container{
-        // background-color: darkblue;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /*com isto fica 4 colunas com 1fr, 1 fraction */
-       
 
-    }
-    .grid-item{
-        border: solid white 1px;
-        padding: 20px;
-        background-color: cornflowerblue;
-        grid-auto-rows: minmax(700px, auto); /*as rows vão ter o tamanho minimo de 100px enquanto que quando tiverem content vão crescer consoante o contant*/
-    }
-    .grid-item-1{
-  
-        grid-column: span 1;
-    
-    }
-    .grid-item-2{
-        grid-row: span 1;
- 
-    }
-}
 footer{
     @include flexCenter(center);
     align-items: center;

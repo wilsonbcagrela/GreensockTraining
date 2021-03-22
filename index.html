@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" defer></script> 
     <script src="javascript/script.js" defer></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
     <title>Learning Greensock</title>
 </head>
 <body>
@@ -33,10 +34,44 @@
         <div class="circle circle-5"></div>
     </div>
     <div class="slide1">
-        <div class="grid-container">
-            <div class="grid-item grid-item-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor quod nostrum sit dicta! Quos magni, modi amet minus, dolores in ducimus a voluptatum hic ut voluptas nemo nobis non aut.</div>
-            <div class="grid-item grid-item-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, consectetur! Voluptatibus repellat officiis dolorum placeat ipsa porro vitae. Minus quae, neque eos mollitia nostrum deleniti sit a ut aliquid ducimus consectetur maxime laboriosam quos! Laboriosam iste repellat odio ducimus accusamus, repudiandae numquam laudantium a animi quasi praesentium, nobis itaque, molestiae asperiores vel ullam commodi fugiat similique expedita. Unde ad animi officia repudiandae corporis, neque inventore placeat ab reiciendis sequi beatae facilis deserunt cupiditate sapiente commodi iure amet, tenetur provident repellendus tempore, alias recusandae! Voluptatibus nostrum reprehenderit facere aliquam itaque accusantium quae eos, debitis ipsam. Vel tempora minus illum velit reiciendis cum voluptates hic, perferendis consequatur. Temporibus aperiam totam nemo quam ipsam. Ducimus laboriosam dolorem est quae quis iusto odit cum ipsum voluptatum officia, veritatis soluta magni eveniet omnis similique inventore ullam recusandae harum minus architecto vitae? Voluptates officiis quas totam dolor doloremque? Laboriosam, impedit porro voluptatem natus in repellendus ullam?</div>
-        </div>
+        <pre class="prettyprint lang-js">
+            const frase = document.querySelector(".frase")
+            const play = document.querySelector(".link1")
+            const pause = document.querySelector(".link2")
+            const reverse = document.querySelector(".link3")
+            const speedUp = document.querySelector(".link4")
+            const speedDown = document.querySelector(".link5")
+
+            const timeline = gsap.timeline( {defaults: {duration: 1}})
+
+            timeline
+                .from("img", {opacity: 0, scale: 0.3, ease: "bounce" })
+                .to("img", {backgroundColor: "#98FB98", borderRadius: "20%", border: "5px solid black"})
+                .from(".circle", {opacity: 0, y: 150, stagger:0.25})
+
+
+
+            frase.addEventListener("click", () =>{
+
+                gsap.from(".link", {duration: 2,opacity: 0, y: "random(-200, 200)", ease:"elastic"})
+            })
+
+            play.addEventListener("click", () => {
+                timeline.play();
+            })
+            pause.addEventListener("click", () => {
+                timeline.pause();
+            })
+            reverse.addEventListener("click", () => {
+                timeline.reverse();
+            })
+            speedUp.addEventListener("click", () => {
+                timeline.timeScale(2);
+            })
+            speedDown.addEventListener("click", () => {
+                timeline.timeScale(0.5);
+            })
+        </pre>
     </div>
     <footer>&copy Prototipo feito por Wilson Agrela </footer>
 

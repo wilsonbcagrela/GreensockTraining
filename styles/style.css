@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   border: 0;
@@ -13,7 +12,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #333;
+  background: #fafafa;
 }
 
 header {
@@ -81,36 +80,11 @@ header .link:hover {
 .content .circle-5 {
   background: black;
 }
-
-.slide1 {
-  height: 100vh;
+.slide1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.slide1 .grid-container {
-  padding: 20px;
-  display: -ms-grid;
-  display: grid;
- 
-  grid-template-columns: repeat(2, 1fr);
-  /*com isto fica 4 colunas com 1fr, 1 fraction */
-}
-
-.slide1 .grid-item {
-  border: solid white 1px;
-  padding: 20px;
-  background-color: cornflowerblue;
-  grid-auto-rows: minmax(700px, auto);
-  /*as rows vão ter o tamanho minimo de 100px enquanto que quando tiverem content vão crescer consoante o contant*/
-}
-
-.slide1 .grid-item-1 {
-  grid-column: span 1;
-}
-
-.slide1 .grid-item-2 {
-  grid-row: span 1;
-}
-
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
